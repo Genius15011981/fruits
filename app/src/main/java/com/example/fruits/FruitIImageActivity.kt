@@ -3,18 +3,18 @@ package com.example.fruits
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.example.fruits.databinding.ActivityFruitIimageBinding
+import com.example.fruits.databinding.ActivityFruitImageBinding
 
 class FruitIImageActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityFruitIimageBinding
-    private var fruits= arrayListOf("Ananas", "Anor", "Avakado", "Banan", "Chernika", "Drakon", "Gilos", "Quavi","Lichi",
+    private lateinit var binding: ActivityFruitImageBinding
+    private var fruitList= arrayListOf("Ananas", "Anor", "Avakado", "Banan", "Chernika", "Drakon", "Gilos", "Quavi","Lichi",
         "Limon", "Longan", "Malina", "mango", "Nok", "Olma")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityFruitIimageBinding.inflate(layoutInflater)
+        binding=ActivityFruitImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val position=intent.getIntExtra("posiion",0)
-        supportActionBar?.title=fruits[position]
+        supportActionBar?.title=fruitList[position]
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.imageView.setImageResource(R.drawable.ananas)
         when(position){
